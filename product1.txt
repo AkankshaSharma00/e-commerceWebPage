@@ -1,0 +1,7 @@
+Black Denim Shorts
+Type : Shorts
+Color: Black
+Length : Above Knee
+Fabric : Denim
+PID : SW101
+Size : XL

@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/myStyle.css" type="text/css">
+
+	<!-- Fonts Used -->
+	<!--link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet"-->
+	<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy" rel="stylesheet">
+
+	<!-- Latest compiled and minified JavaScript -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+	<title>e-commerce || index</title>
+
+</head>
+<body>
+	<!-- ============== Div for icon-bar ================ -->
+	<!--div class="icon-bar">
+			<h1><img  src="images/fashion-logo-design.jpg" alt="logo" width=200px height=80px>
+			<a href="#" target="_blank" style="float:right;margin:10px;"><i class="fa fa-facebook-square"></i></a>
+			<a href="#" target="_blank" style="float:right;margin:10px;"><i class="fa fa-instagram"></i></a>
+			</h1>
+	</div-->
+
+	<!-- =============== Div for Navbar ===================-->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+						</button>
+					<img src="images/fashion-logo-design.jpg" alt="logo" style="height:50px;">
+				</div>
+			<div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+							<li id="navctn"><a href="#">Home</a></li>
+							<!--li id="navctn"><a href="AboutUs.html">About Us</a></li-->
+							<li id="navctn">
+								<div class="dropdown">
+							<button class="dropbtn">Products</button>
+							<div class="dropdown-content">
+
+								<a href="#">Tops</a>
+								<a href="#">Jeans</a>
+								<a href="#">Dresses</a>
+
+							</div>
+						</div>
+							</li>
+							<li id="navctn"><a href="#">Blog</a></li>
+							<li id="navctn"><a href="#">Brands</a></li>
+							<li id="navctn"><a href="#">Contact Us</a></li>
+							<!--<li><a href="#section5">Contact Us</a></li>-->
+					</ul>
+				</div>
+		</div>
+		</div>
+		</nav>
+
+		<!-- ================= Div for Body ======================= -->
+		<div class="container-fluid" id="banner1">
+			<img src="/e-commerce/images/indexBanner.jpg" id="bannerImg" />
+		</div>
+
+		<div class="container-fluid" id="introctn">
+			<center><h1>Fashion</h1>
+			<p style="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></center>
+		</div>
+
+		<div class="container-fluid" id="products">
+			<div class="row">
+				<div class="col-sm-6" id="pd1">
+					<center><button type="button" onmouseover="loadDoc('product1.txt', myFunction1)" onmouseout="loadDoc('/e-commerce/images/product2.jpg',myFunction2)"><img src="images/product1.jpg" /></button></center>
+				</div>
+				<div class="col-sm-6" id="pd2">
+					<center><button type="button"><img src="images/product2.jpg" /></button></center>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<center><img src="images/product3.jpg" /></center>
+				</div>
+				<div class="col-sm-6">
+					<center><img src="images/product4.jpg" /></center>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			function loadDoc(url,cFunction){
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function(){
+					if(this.readyState==4 && this.status==200)
+					{
+						cFunction(this);
+					}
+				};
+				xhttp.open("Get",url,true);
+				xhttp.send();
+			}
+
+			function myFunction1(){
+				document.getElementById("pd1").innerHTML=`<br><h2>Black Denim Shorts</h2><h3>Color : Black<br>Fabric : Denim</h3>`
+			}
+
+			function myFunction2(){
+				document.getElementById("pd1").src="images/product2.jpg";
+			}	
+		</script>
+</body>
+</html>
